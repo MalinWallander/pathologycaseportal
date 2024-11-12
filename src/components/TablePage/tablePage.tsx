@@ -4,6 +4,7 @@ function TablePage() {
   return (
     <>
       <Header />
+      <div className='tablePageContainer'></div>
     </>
   );
 }

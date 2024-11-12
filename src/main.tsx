@@ -8,6 +8,7 @@ import RecallPage from "./components/RecallPage/recallPage.tsx";
 import LegalPage from "./components/LegalPage/legalPage.tsx";
 import SubmitPage from "./components/SubmitPage/submitPage.tsx";
 import TablePage from "./components/TablePage/tablePage.tsx";
+import FirstPage from "./components/FirstPage/firstPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -31,8 +32,12 @@ const router = createBrowserRouter([
         element: <SubmitPage />,
       },
       {
-        path: "/",
+        path: "cases",
         element: <TablePage />,
+      },
+      {
+        path: "/",
+        element: <FirstPage />,
       },
     ],
   },

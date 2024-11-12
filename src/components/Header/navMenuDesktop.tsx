@@ -7,6 +7,9 @@ const NavMenuDesktop = () => {
       <Link to={"/"} className='titleDesktopNav'>
         Home
       </Link>
+      <Link to={"/cases"} className='titleDesktopNav'>
+        Cases
+      </Link>
       <Link to={"/about"} className='titleDesktopNav'>
         About
       </Link>

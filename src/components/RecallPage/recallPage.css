@@ -1,0 +1,79 @@
+.recallPageContainer {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: auto;
+  margin-top: 40px;
+  align-items: center;
+
+  font-family: "Khula", sans-serif;
+  font-weight: 300;
+}
+
+.infoText {
+  text-align: center;
+}
+
+.formRecallCaseContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40vw;
+  padding: 30px;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inputComponentRecallCase {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputLabel {
+  height: 1.3rem;
+}
+
+.formInput {
+  height: 2rem;
+  border: none;
+  border-bottom: 1px solid #b7bbbe;
+  background-color: #f6f7f7;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.formInput:focus {
+  outline: none;
+  border: 1px solid #434f64;
+}
+
+.inputExtraInfo {
+  font-size: 0.8rem;
+  color: #697381;
+}
+
+.errorMessage {
+  color: #de5e4a;
+  font-size: 0.9rem;
+}
+
+.recallCaseButton {
+  border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  color: #edeeef;
+  background-color: #303d54;
+  font-size: 0.9rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 750px) {
+  .recallPageContainer {
+    width: 80vw;
+  }
+  .formRecallCaseContainer {
+    width: 80vw;
+  }
+}
