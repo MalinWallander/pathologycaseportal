@@ -1,2 +1,11 @@
 .legalPageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70vw;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Khula", sans-serif;
+  font-weight: 300;
 }

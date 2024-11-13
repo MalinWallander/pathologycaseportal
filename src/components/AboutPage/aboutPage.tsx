@@ -1,12 +1,16 @@
 import "./aboutPage.css";
 import Header from "../Header/header";
+import Footer from "../Footer/footer";
 
 function AboutPage() {
   return (
     <>
-      <Header />
       <div className='aboutPageContainer'>
-        <h1 className='titlePage'>About pathology case portal</h1>
+        <Header />
+        <div className='contentPage'>
+          <h1 className='titlePage'>About pathology case portal</h1>
+        </div>
+        <Footer />
       </div>
     </>
   );

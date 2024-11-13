@@ -1,0 +1,10 @@
+@media screen and (max-width: 750px) {
+  .footerBigScreen {
+    display: none;
+  }
+}
+@media screen and (min-width: 750px) {
+  .footerSmallScreen {
+    display: none;
+  }
+}

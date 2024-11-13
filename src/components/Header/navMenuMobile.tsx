@@ -20,7 +20,7 @@ const NavMenuMobile: React.FC<React.PropsWithChildren<headerProps>> = (
         <IoArrowForward className='navArrowIcon' />
       </Link>
       <Link
-        to={"/about"}
+        to={"/cases"}
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}
       >
@@ -28,7 +28,7 @@ const NavMenuMobile: React.FC<React.PropsWithChildren<headerProps>> = (
         <IoArrowForward className='navArrowIcon' />
       </Link>
       <Link
-        to={"/cases"}
+        to={"/about"}
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}
       >

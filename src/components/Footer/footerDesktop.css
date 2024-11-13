@@ -1,0 +1,21 @@
+.footerDesktopContainer {
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1b2a43;
+}
+
+.logoDesktopFooter {
+  width: 30vw;
+  object-fit: cover;
+}
+
+.adressFooterContainer {
+  color: #edeeef;
+  font-family: "Khula", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+}

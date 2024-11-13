@@ -1,0 +1,7 @@
+.aboutPageContainer {
+  display: flex;
+  flex-direction: column;
+}
+.contentPage {
+  height: 200vh;
+}
