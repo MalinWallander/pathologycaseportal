@@ -7,6 +7,7 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 .headerLogo {
@@ -14,12 +15,12 @@
   margin: 10px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 950px) {
   .navMenuBigScreen {
     display: none;
   }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 950px) {
   .navMenuSmallScreen {
     display: none;
   }

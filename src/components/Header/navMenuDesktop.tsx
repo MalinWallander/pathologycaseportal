@@ -10,14 +10,17 @@ const NavMenuDesktop = () => {
       <Link to={"/cases"} className='titleDesktopNav'>
         Cases
       </Link>
-      <Link to={"/about"} className='titleDesktopNav'>
-        About
-      </Link>
       <Link to={"/submit"} className='titleDesktopNav'>
         Submit case
       </Link>
+      <Link to={"/about"} className='titleDesktopNav'>
+        About
+      </Link>
       <Link to={"/recall"} className='titleDesktopNav'>
         Recall case
+      </Link>
+      <Link to={"/contact"} className='titleDesktopNav'>
+        Contact us
       </Link>
       <Link to={"/legal"} className='titleDesktopNav'>
         Legal notice

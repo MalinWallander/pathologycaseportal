@@ -3,14 +3,18 @@
   flex-direction: column;
 }
 
-.legalPageContainer {
+.tableContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 70vw;
+  gap: 5px;
+
   margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
+  width: 90vw;
+}
+
+.titlePageCases {
   font-family: "Khula", sans-serif;
   font-weight: 300;
 }

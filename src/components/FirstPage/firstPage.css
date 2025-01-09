@@ -1,0 +1,72 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstPageContainer {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+
+  font-family: "Khula", sans-serif;
+  font-weight: 300;
+}
+.imageFirstPage {
+  height: 15vh;
+  object-fit: cover;
+  width: 95vw;
+}
+.infoAndButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonContainerFirstPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.infoText {
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+.titlePage {
+  text-align: center;
+}
+
+.navigationButtonFirstPage {
+  color: white;
+  background-color: #1b2a43;
+  font-size: 1rem;
+  font-weight: lighter;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  .infoAndButtons {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .infoText {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .firstPageContainer {
+    width: 80vw;
+  }
+}

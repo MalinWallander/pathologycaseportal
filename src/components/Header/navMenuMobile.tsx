@@ -52,6 +52,14 @@ const NavMenuMobile: React.FC<React.PropsWithChildren<headerProps>> = (
         <IoArrowForward className='navArrowIcon' />
       </Link>
       <Link
+        to={"/contact"}
+        className='navMenuItem'
+        onClick={() => props.setShowMenu(false)}
+      >
+        <div className='titleNavMenu'>Contact us</div>
+        <IoArrowForward className='navArrowIcon' />
+      </Link>
+      <Link
         to={"/legal"}
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}

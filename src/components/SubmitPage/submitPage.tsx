@@ -1,9 +1,10 @@
+import Footer from "../Footer/footer";
 import Header from "../Header/header";
 import "./submitPage.css";
 import { useForm, SubmitHandler } from "react-hook-form";
-
-// Date submitted: [automatically generated upon submission]
-// Case ID: generated
+import baseUrl from "../../constants";
+import SubmitPopup from "./submitPopup";
+import { useState } from "react";
 
 type Inputs = {
   name: string;
@@ -23,11 +24,32 @@ function SubmitPage() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const [isSubmitPopupVisible, setIsSubmitPopupVisible] = useState(false);
+
+  const toggleSubmitPopup = () => {
+    setIsSubmitPopupVisible(!isSubmitPopupVisible);
+  };
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const jsonData = JSON.stringify(data);
+
+    await fetch(`http://${baseUrl}/case`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: jsonData,
+    }).then(() => {
+      reset();
+      toggleSubmitPopup();
+    });
+  };
+
   return (
-    <>
+    <div className='pageContainer'>
       <Header />
       <div className='submitPageContainer'>
         <h1 className='titlePage'>Submit case</h1>
@@ -72,22 +94,22 @@ function SubmitPage() {
             <label className='inputLabel'>Tumor class</label>
             <select {...register("tumorClass")} className='formInput'>
               <option value=''>Select...</option>
-              <option value='soft tissue and bone'>Soft tissue and bone</option>
-              <option value='eye and orbit'>Eye and orbit</option>
-              <option value='skin'>Skin</option>
-              <option value='heamatolymphoid'>Heamatolymphoid</option>
-              <option value='head and neck'>Head and neck</option>
-              <option value='endocrine and neuroendocrine'>
+              <option value='Soft tissue and bone'>Soft tissue and bone</option>
+              <option value='Eye and orbit'>Eye and orbit</option>
+              <option value='Skin'>Skin</option>
+              <option value='Heamatolymphoid'>Heamatolymphoid</option>
+              <option value='Head and neck'>Head and neck</option>
+              <option value='Endocrine and neuroendocrine'>
                 Endocrine and neuroendocrine
               </option>
-              <option value='urinary and male genital'>
+              <option value='Urinary and male genital'>
                 Urinary and male genital
               </option>
-              <option value='paedriatic'>Paedriatic</option>
-              <option value='cns'>CNS</option>
-              <option value='female genital'>Female genital</option>
-              <option value='breast'>Breast</option>
-              <option value='digestive system'>Digestive system</option>
+              <option value='Paedriatic'>Paedriatic</option>
+              <option value='CNS'>CNS</option>
+              <option value='Female genital'>Female genital</option>
+              <option value='Breast'>Breast</option>
+              <option value='Digestive system'>Digestive system</option>
             </select>
           </div>
           <div className='inputComponentSubmitCase'>
@@ -122,20 +144,24 @@ function SubmitPage() {
             <label className='inputLabel'>Evidence from</label>
             <select {...register("evidence")} className='formInput'>
               <option value=''>Select...</option>
-              <option value='rna'>RNA only</option>
-              <option value='dna'>DNA only</option>
-              <option value='skin'>DNA and RNA</option>
-              <option value='na'>n:a</option>
+              <option value='RNA only'>RNA only</option>
+              <option value='DNA only'>DNA only</option>
+              <option value='DNA and RNA'>DNA and RNA</option>
+              <option value='n:a'>n:a</option>
             </select>
           </div>
           <div className='inputComponentSubmitCase'>
             <label className='inputLabel'>Additional comment</label>
             <input {...register("comment")} className='formInput' />
           </div>
-          <input type='submit' className='recallCaseButton' />
+          <input type='submit' className='submitCaseButton' />
         </form>
       </div>
-    </>
+      {isSubmitPopupVisible && (
+        <SubmitPopup toggleSubmitPopup={toggleSubmitPopup} />
+      )}
+      <Footer />
+    </div>
   );
 }
 

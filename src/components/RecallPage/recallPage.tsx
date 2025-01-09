@@ -2,6 +2,8 @@ import "./recallPage.css";
 import Header from "../Header/header";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Footer from "../Footer/footer";
+import { useState } from "react";
+import RecallPopup from "./recallPopup";
 
 type Inputs = {
   name: string;
@@ -18,6 +20,12 @@ function RecallPage() {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const [isRecallPopupVisible, setIsRecallPopupVisible] = useState(false);
+
+  const toggleRecallPopup = () => {
+    setIsRecallPopupVisible(!isRecallPopupVisible);
+  };
+
   return (
     <div className='pageContainer'>
       <Header />
@@ -73,9 +81,16 @@ function RecallPage() {
             <label className='inputLabel'>Additional notes</label>
             <input {...register("note")} className='formInput' />
           </div>
-          <input type='submit' className='recallCaseButton' />
+          <input
+            type='submit'
+            className='recallCaseButton'
+            onClick={() => toggleRecallPopup()}
+          />
         </form>
       </div>
+      {isRecallPopupVisible && (
+        <RecallPopup toggleRecallPopup={toggleRecallPopup} />
+      )}
       <Footer />
     </div>
   );

@@ -1,9 +1,13 @@
 .navMenuContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   height: 90vh;
+  width: 100vw;
   background-color: #303d54;
+  position: sticky;
+  top: 10vh;
+  left: 0;
 }
 
 .navMenuItem {
