@@ -10,7 +10,7 @@ interface props {
   rowData: IRow[];
 }
 
-const TablePage: FC<props> = (props): JSX.Element => {
+const TablePage: FC<props> = (): JSX.Element => {
   const [rowData, setRowData] = useState<IRow[]>([]);
 
   const fetchCases = () => {
@@ -24,7 +24,7 @@ const TablePage: FC<props> = (props): JSX.Element => {
     fetchCases();
   }, []);
 
-  const [colDefs, setColDefs] = useState<ColDef<IRow>[]>([
+  const [colDefs] = useState<ColDef<IRow>[]>([
     { field: "histologicalDiagnosis" },
     { field: "anatomicalLocation" },
     { field: "tumorClass" },

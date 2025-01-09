@@ -6,7 +6,7 @@ interface props {
   rowdata: undefined | IRow[];
 }
 
-const CaseCard: FC<props> = (props): JSX.Element => {
+const CaseCard: FC<props> = (): JSX.Element => {
   console.log();
 
   return (

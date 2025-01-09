@@ -3,7 +3,6 @@ import Header from "../Header/header";
 import Books from "../../assets/books.avif";
 import Footer from "../Footer/footer";
 import { Link } from "react-router-dom";
-import CaseCard from "../CasePage/caseCard";
 
 function FirstPage() {
   return (
@@ -42,7 +41,7 @@ function FirstPage() {
         </div>
       </div>
       <Footer />
-      <CaseCard />
+      {/* <CaseCard /> */}
     </div>
   );
 }
