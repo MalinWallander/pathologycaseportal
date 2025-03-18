@@ -13,10 +13,12 @@ function FirstPage() {
         <h1 className='titlePage'>Welcome to Pathology Case Portal</h1>
         <div className='infoAndButtons'>
           <p className='infoText'>
-            Start using Pathology Case Portal to search for a specific molecular
-            markers other research groups may have found as well, or to announce
-            your interest in a rare tumor subtype for which cohort size usually
-            is a great problem when considering publication.
+            Welcome to Pathology Case Portal. This web application was
+            established to facilitate pathologists to connect over rare cases.
+            We hope that you upload rare cases to the open portal and use it to
+            you identify similar cases. In the end, we wish that you move from
+            publishing case reports to case series. If you do connect through
+            this application, feel free to mention it in the acknowledgements.
           </p>
           <div className='buttonContainerFirstPage'>
             <Link to={"/cases"} className='titleDesktopNav'>
@@ -29,11 +31,11 @@ function FirstPage() {
                 Submit a case
               </button>
             </Link>
-            <Link to={"/about"} className='titleDesktopNav'>
+            {/* <Link to={"/about"} className='titleDesktopNav'>
               <button className='navigationButtonFirstPage'>
                 More about this project
               </button>
-            </Link>
+            </Link> */}
             <Link to={"/contact"} className='titleDesktopNav'>
               <button className='navigationButtonFirstPage'>Contact us</button>
             </Link>

@@ -6,12 +6,11 @@ function FooterDesktop() {
     <div className='footerDesktopContainer'>
       <img src={Logo} alt='Logo' className='logoDesktopFooter' />
       <div className='adressFooterContainer'>
-        Karolinska Institutet <br />
+        Hosted by <br />
         Department of Oncology-Pathology
         <br />
-        Anna Steckséns gata 30A, D2:04
+        Karolinska Institutet
         <br />
-        171 64 Solna
       </div>
     </div>
   );

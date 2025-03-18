@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       <div className='headerContainer'>
-        <img src={Logo} alt='' className='headerLogo' />
+        {/* <img src={Logo} alt='' className='headerLogo' /> */}
         <div className='navigationPartHeader'>
           <div className='navMenuBigScreen'>
             <NavMenuDesktop />

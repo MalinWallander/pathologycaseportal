@@ -25,14 +25,14 @@ const TablePage: FC<props> = (): JSX.Element => {
   }, []);
 
   const [colDefs] = useState<ColDef<IRow>[]>([
-    { field: "histologicalDiagnosis" },
-    { field: "anatomicalLocation" },
-    { field: "tumorClass" },
-    { field: "genetics" },
-    { field: "methylationCluster" },
-    { field: "evidence" },
-    { field: "comment" },
-    { field: "institution" },
+    { field: "tumorClass", filter: "agSetColumnFilter" },
+    { field: "histologicalDiagnosis", filter: "agSetColumnFilter" },
+    { field: "anatomicalLocation", filter: "agSetColumnFilter" },
+    { field: "genetics", filter: "agSetColumnFilter" },
+    { field: "methylationCluster", filter: "agSetColumnFilter" },
+    { field: "evidence", filter: "agSetColumnFilter" },
+    { field: "comment", filter: "agSetColumnFilter" },
+    { field: "institution", filter: "agSetColumnFilter" },
   ]);
 
   return (

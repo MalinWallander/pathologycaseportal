@@ -7,8 +7,6 @@ interface props {
 }
 
 const CaseCard: FC<props> = (): JSX.Element => {
-  console.log();
-
   return (
     <div className='caseCardContainer'>
       <div className='caseCardInfo'>Tumor data: {}</div>

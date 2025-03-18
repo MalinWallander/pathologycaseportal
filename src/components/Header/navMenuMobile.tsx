@@ -11,14 +11,14 @@ const NavMenuMobile: React.FC<React.PropsWithChildren<headerProps>> = (
 ) => {
   return (
     <div className='navMenuContainer'>
-      <Link
+      {/* <Link
         to={"/"}
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}
       >
         <div className='titleNavMenu'>Home</div>
         <IoArrowForward className='navArrowIcon' />
-      </Link>
+      </Link> */}
       <Link
         to={"/cases"}
         className='navMenuItem'
@@ -27,20 +27,20 @@ const NavMenuMobile: React.FC<React.PropsWithChildren<headerProps>> = (
         <div className='titleNavMenu'>Cases</div>
         <IoArrowForward className='navArrowIcon' />
       </Link>
-      <Link
+      {/* <Link
         to={"/about"}
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}
       >
         <div className='titleNavMenu'>About</div>
         <IoArrowForward className='navArrowIcon' />
-      </Link>
+      </Link> */}
       <Link
         to={"/submit"}
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}
       >
-        <div className='titleNavMenu'>Submit case</div>
+        <div className='titleNavMenu'>Submit a case</div>
         <IoArrowForward className='navArrowIcon' />
       </Link>
       <Link
@@ -48,7 +48,7 @@ const NavMenuMobile: React.FC<React.PropsWithChildren<headerProps>> = (
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}
       >
-        <div className='titleNavMenu'>Recall case</div>
+        <div className='titleNavMenu'>Recall a case</div>
         <IoArrowForward className='navArrowIcon' />
       </Link>
       <Link
@@ -64,7 +64,7 @@ const NavMenuMobile: React.FC<React.PropsWithChildren<headerProps>> = (
         className='navMenuItem'
         onClick={() => props.setShowMenu(false)}
       >
-        <div className='titleNavMenu'>Legal notice</div>
+        <div className='titleNavMenu'>Legal</div>
         <IoArrowForward className='navArrowIcon' />
       </Link>
     </div>
