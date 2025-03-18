@@ -3,7 +3,7 @@ import baseUrl, { IRow } from "../../constants";
 import Header from "../Header/header";
 import Footer from "../Footer/footer";
 import TablePage from "./tablePage";
-import CaseCardPage from "./caseCardPage";
+// import CaseCardPage from "./caseCardPage";
 
 function CasePage() {
   const [rowData, setRowData] = useState<IRow[]>([]);
@@ -23,7 +23,7 @@ function CasePage() {
     <div>
       <Header />
       <TablePage rowData={rowData} />
-      <CaseCardPage rowData={rowData} />
+      {/* <CaseCardPage rowData={rowData} /> */}
       <Footer />
     </div>
   );
