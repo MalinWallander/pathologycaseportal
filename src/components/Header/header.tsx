@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Logo from "../../assets/PathologyCasePortal_logo2.png";
 import "./header.css";
 import NavMenuDesktop from "./navMenuDesktop";
 import NavMenuMobile from "./navMenuMobile";
