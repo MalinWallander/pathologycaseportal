@@ -17,7 +17,7 @@ const TablePage: FC<props> = (): JSX.Element => {
   const [caseData, setCaseData] = useState<IRow>();
 
   const fetchCases = () => {
-    fetch(`http://${baseUrl}/cases`)
+    fetch(`http://${baseUrl}/portal/cases`)
       .then((result) => result.json())
       .then((rowData) => {
         setRowData(rowData);

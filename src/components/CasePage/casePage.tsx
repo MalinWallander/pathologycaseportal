@@ -9,7 +9,7 @@ function CasePage() {
   const [rowData, setRowData] = useState<IRow[]>([]);
 
   const fetchCases = () => {
-    fetch(`http://${baseUrl}/cases`)
+    fetch(`http://${baseUrl}/portal/cases`)
       .then((result) => result.json())
       .then((rowData) => {
         setRowData(rowData);
