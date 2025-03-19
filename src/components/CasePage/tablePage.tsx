@@ -5,6 +5,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 import { FC, useEffect, useState } from "react";
 import "./tablePage.css";
 import baseUrl, { IRow } from "../../constants";
+import DetailedView from "./detailedView";
 
 interface props {
   rowData: IRow[];
@@ -12,6 +13,8 @@ interface props {
 
 const TablePage: FC<props> = (): JSX.Element => {
   const [rowData, setRowData] = useState<IRow[]>([]);
+  const [isDetailedViewVisible, setIsDetailedViewVisible] = useState(false);
+  const [caseData, setCaseData] = useState<IRow>();
 
   const fetchCases = () => {
     fetch(`http://${baseUrl}/cases`)
@@ -23,6 +26,10 @@ const TablePage: FC<props> = (): JSX.Element => {
   useEffect(() => {
     fetchCases();
   }, []);
+
+  const toggleDetailedView = () => {
+    setIsDetailedViewVisible(!isDetailedViewVisible);
+  };
 
   const [colDefs] = useState<ColDef<IRow>[]>([
     { field: "tumorClass", filter: "agSetColumnFilter" },
@@ -47,7 +54,18 @@ const TablePage: FC<props> = (): JSX.Element => {
             className='table'
             rowData={rowData}
             columnDefs={colDefs}
+            onRowClicked={(e) => {
+              toggleDetailedView();
+              setCaseData(e.data);
+            }}
           />
+          {isDetailedViewVisible && (
+            <DetailedView
+              caseData={caseData}
+              isDetailedViewVisible={isDetailedViewVisible}
+              toggleDetailedView={toggleDetailedView}
+            />
+          )}
         </div>
       </div>
     </div>

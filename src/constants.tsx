@@ -2,7 +2,7 @@ const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export default baseUrl;
 
-export interface IRow {
+export type IRow = {
   email: string;
   backupEmail: string;
   name: string;
@@ -14,4 +14,4 @@ export interface IRow {
   methylationCluster: string;
   evidence: string;
   comment: string;
-}
+};
