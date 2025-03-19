@@ -36,7 +36,7 @@ function SubmitPage() {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const jsonData = JSON.stringify(data);
 
-    await fetch(`http://${baseUrl}/case`, {
+    await fetch(`http://${baseUrl}/portal/case`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
