@@ -22,9 +22,9 @@ const NavMenuDesktop = () => {
       <Link to={"/contact"} className='titleDesktopNav'>
         Contact us
       </Link>
-      <Link to={"/legal"} className='titleDesktopNav'>
+      {/* <Link to={"/legal"} className='titleDesktopNav'>
         Legal
-      </Link>
+      </Link> */}
     </div>
   );
 };
