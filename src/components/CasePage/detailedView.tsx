@@ -64,9 +64,9 @@ const DetailedView: FC<props> = (props): JSX.Element => {
               >
                 Close
               </button>
-              <button className='buttonDetailedView'>
+              {/* <button className='buttonDetailedView'>
                 Message case submitter
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
