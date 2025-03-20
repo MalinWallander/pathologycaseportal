@@ -13,7 +13,7 @@ const DetailedView: FC<props> = (props): JSX.Element => {
     <>
       <div className='overlay'>
         <div
-          className='overlayBackground'
+          className='overlayDetailedBackground'
           onClick={() => props.toggleDetailedView()}
         ></div>
         <div className='overlayContainer'>

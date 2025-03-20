@@ -55,7 +55,7 @@ function SubmitPage() {
         <h1 className='titlePage'>Submit case</h1>
         <p className='infoText'>
           Enter the information about your case in the form below. Make sure to
-          not include any identifiable information. Your email adress will not
+          not include any identifiable information. Your email address will not
           be visible to others, only a way for us to connect you.
         </p>
         <form

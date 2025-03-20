@@ -51,7 +51,7 @@ function RecallPage() {
             )}
           </div>
           <div className='inputComponentRecallCase'>
-            <label className='inputLabel'>Email adress</label>
+            <label className='inputLabel'>Email address</label>
             <input
               {...register("email", { required: true })}
               className='formInput'
@@ -63,7 +63,7 @@ function RecallPage() {
           <div className='inputComponentRecallCase'>
             <label className='inputLabel'>Case ID</label>
             <p className='inputExtraInfo'>
-              *Recieved in confirmation email when submitted
+              *Received in confirmation email when submitted
             </p>
             <input
               {...register("caseID", { required: true })}
