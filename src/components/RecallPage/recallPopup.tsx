@@ -8,7 +8,10 @@ interface props {
 const RecallPopup: FC<props> = (props): JSX.Element => {
   return (
     <>
-      <div className='overlayBackground'></div>
+      <div
+        className='overlayBackground'
+        onClick={() => props.toggleRecallPopup()}
+      ></div>
       <div className='recallPopupContainer'>
         <p>
           A message has been sent and you case will be deleted shortly. Please

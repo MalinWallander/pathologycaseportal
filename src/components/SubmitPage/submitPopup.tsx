@@ -8,7 +8,10 @@ interface props {
 const SubmitPopup: FC<props> = (props): JSX.Element => {
   return (
     <>
-      <div className='overlayBackground'></div>
+      <div
+        className='overlayBackground'
+        onClick={() => props.toggleSubmitPopup()}
+      ></div>
       <div className='submitPopupContainer'>
         <p>
           You have successfully submitted your case. We will send a confirmation
