@@ -28,7 +28,6 @@ function ContactPage() {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const jsonData = JSON.stringify(data);
 
-    // TODO: Vet inte hur JSON-datan ser ut som
     await fetch(`http://${baseUrl}/email/contact`, {
       method: "POST",
       headers: {
