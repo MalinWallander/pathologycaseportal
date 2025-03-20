@@ -1,9 +1,10 @@
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import Footer from "../Footer/footer";
 import Header from "../Header/header";
 import { useState } from "react";
 import "./contactPage.css";
 import ContactPopup from "./contactPopup";
+import baseUrl from "../../constants";
 
 type Inputs = {
   name: string;
@@ -15,6 +16,7 @@ function ContactPage() {
   const {
     handleSubmit,
     reset,
+    register,
     formState: { errors },
   } = useForm<Inputs>();
   const [isContactPopupVisible, setIsContactPopupVisible] = useState(false);
@@ -23,9 +25,20 @@ function ContactPage() {
     setIsContactPopupVisible(!isContactPopupVisible);
   };
 
-  const onSubmit = () => {
-    toggleContactPopup();
-    reset();
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const jsonData = JSON.stringify(data);
+
+    // TODO: Vet inte hur JSON-datan ser ut som
+    await fetch(`http://${baseUrl}/email/contact`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: jsonData,
+    }).then(() => {
+      reset();
+      toggleContactPopup();
+    });
   };
   return (
     <div>
@@ -44,21 +57,30 @@ function ContactPage() {
           >
             <div className='inputComponentContactPage'>
               <label className='inputLabel'>Your name</label>
-              <input className='formInput' />
+              <input
+                {...register("name", { required: true })}
+                className='formInput'
+              />
               {errors.name && (
                 <span className='errorMessage'>This field is required</span>
               )}
             </div>
             <div className='inputComponentContactPage'>
               <label className='inputLabel'>Email</label>
-              <input className='formInput' />
+              <input
+                {...register("email", { required: true })}
+                className='formInput'
+              />
               {errors.email && (
                 <span className='errorMessage'>This field is required</span>
               )}
             </div>
             <div className='inputComponentContactPage'>
               <label className='inputLabel'>Message</label>
-              <textarea className='textAreaInput' />
+              <textarea
+                {...register("message", { required: true })}
+                className='textAreaInput'
+              />
               {errors.message && (
                 <span className='errorMessage'>This field is required</span>
               )}
